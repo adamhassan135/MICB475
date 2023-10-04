@@ -40,18 +40,18 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
   a. Chad told us to google how to make our manifest file/ask Evelyn
   b. Trush will process the datasets once Adam puts them into qiime  
 
-#### Stuff We did 
+# Stuff We did 
 
-# September 26, 2023
+### September 26, 2023
 
 Adam started the github lab notebook 
 Adam combined datasets
 Adam tried to iron out a research proposal 
 
-# October 3rd, 2023
+### October 3rd, 2023
 
 Josh moved everything over from google docs to github and burned the google doc 
 
-####Project 1
+#Project 1
 
 
