@@ -15,15 +15,22 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 # Project Codes
 #P001- Combining of Tanzania and Columbia Data set in Preparation for Manifest File Generation
 
+
 ## W4-TM: Week 4- Team Meeting 1
 
 ### Team Meeting 1 Agenda
 1. Selecting a Data and Research Question
 2. Getting a timeline for the proposal
 
-### Team Meeting 1 Conclusions
+### **Meeting Minutes**
+* Get a better understanding of what exactly we want to research with these 2 data sets
+* That we will eventually have to create a new manifest file within QIIME2 attempting to reconcile the 2 pathways
+* Get a github account ready and start our laboratory notebook 
+
+### Team Meeting 1 Conclusions/Next Week Tasks
    a. Decided on combining Hadza and Colombia datasets to compare the two
-   b. Decided to designate Adam with combining datasets in qiime
+   b. Decided to designate Adam with combining datasets via excel
+
 
 ## W5-TM: Week 5- Team Meeting 2
 
