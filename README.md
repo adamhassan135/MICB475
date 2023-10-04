@@ -11,7 +11,7 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 |Project Code|Experiment#|Title|Start Date|
 |------------|-----------|-----|----------|
 |#P001      |W4-TM|Week 4 Team Meeting|25-Sept-2023|
-|#P001      |W5-TM|Week 5 Team Meeting|3-Oct-2023
+|#P001      |W5-TM|Week 5 Team Meeting|3-Oct-2023|
 # Project Codes
 #P001- Combining of Tanzania and Columbia Data set in Preparation for Manifest File Generation
 
@@ -28,8 +28,8 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 * Get a github account ready and start our laboratory notebook 
 
 ### Team Meeting 1 Conclusions/Next Week Tasks
-   a. Decided on combining Hadza and Colombia datasets to compare the two
-   b. Decided to designate Adam with combining datasets via excel
+   * Decided on combining Hadza and Colombia datasets to compare the two
+   * Decided to designate Adam with combining datasets via excel
 
 
 ## W5-TM: Week 5- Team Meeting 2
@@ -39,13 +39,16 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 2. Iron out research proposal
 3. Iron out our next tasks
 
+### **Meeting Minutes**
+*
 
 ### Stuff We did 
 
    
-### Team Meeting 2 Conclusions 
-  a. Chad told us to google how to make our manifest file/ask Evelyn
-  b. Trush will process the datasets once Adam puts them into qiime  
+### Team Meeting 2 Conclusions/Things to do for next week
+  * Chad told us to google how to make our manifest file/ask Evelyn
+  * Trush will process the datasets once Adam puts them into qiime
+  * Complete QIIME processing by next week if possible
 
 # Stuff We did 
 
@@ -59,8 +62,8 @@ Adam tried to iron out a research proposal
 
 ### October 3rd, 2023
 
-Josh moved everything over from google docs to github and burned the google doc 
+Josh moved everything over from google docs to github 
 
-# Project 1
+
 
 
