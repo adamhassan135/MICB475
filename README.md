@@ -10,14 +10,14 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 # Table of Contents
 |Project Code|Experiment#|Title|Start Date|
 |------------|-----------|-----|----------|
-|#P001      |W4-TM|Week 4 Team Meeting|25-Sept-2023|
+|#P001      |W4-TM|Week 4 Team Meeting|26-Sept-2023|
 |#P001      |W5-TM|Week 5 Team Meeting|3-Oct-2023|
 # Project Codes
 #P001- Combining of Tanzania and Columbia Data set in Preparation for Manifest File Generation
 
 
-## W4-TM: Week 4- Team Meeting 1
-
+## W4-TM: Week 4- Team Meeting 1 (26-Sept-2023)
+### Start
 ### Team Meeting 1 Agenda
 1. Selecting a Data and Research Question
 2. Getting a timeline for the proposal
@@ -30,6 +30,8 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 ### Team Meeting 1 Conclusions/Next Week Tasks
    * Decided on combining Hadza and Colombia datasets to compare the two
    * Decided to designate Adam with combining datasets via excel
+
+### End  ### Initials:AA  ### (26-Sept-2023)
 
 
 ## W5-TM: Week 5- Team Meeting 2
