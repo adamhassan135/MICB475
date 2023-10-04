@@ -31,7 +31,8 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
    * Decided on combining Hadza and Colombia datasets to compare the two
    * Decided to designate Adam with combining datasets via excel
 
-### End  ### Initials:AA  ### (26-Sept-2023)
+ ### End   
+ -AA (26-Sept-2023)
 
 
 ## W5-TM: Week 5- Team Meeting 2
