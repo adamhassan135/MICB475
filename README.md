@@ -34,9 +34,8 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
  ### End   
  -AA (26-Sept-2023)
 
-
 ## W5-TM: Week 5- Team Meeting 2
-
+### Start
 ### Team Meeting 2 Agenda 
 1. What to do with a combined dataset once finished
 2. Iron out research proposal
@@ -49,12 +48,12 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 
 ### Stuff We did 
 
-   
 ### Team Meeting 2 Conclusions/Things to do for next week
   * Chad told us to google how to make our manifest file/ask Evelyn
   * Trush will process the datasets once Adam puts them into qiime
   * Complete QIIME processing by next week if possible
-
+### End
+-AA (3-Oct-2023)
 # Stuff We did 
 
 ### September 26, 2023
