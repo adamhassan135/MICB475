@@ -40,7 +40,9 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 3. Iron out our next tasks
 
 ### **Meeting Minutes**
-*
+* Talked about the breakdown of tasks as well as the delegation of tasks amongst indidviuals
+* Worked out our overarching research question and the smaller aims within the larger question
+* Talked about the tasks that are required to puruse the research project in question
 
 ### Stuff We did 
 
