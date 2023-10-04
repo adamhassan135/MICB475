@@ -34,7 +34,7 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
  ### End   
  -AA (26-Sept-2023)
 
-## W5-TM: Week 5- Team Meeting 2
+## W5-TM: Week 5- Team Meeting 2 (3-Oct-2023)
 ### Start
 ### Team Meeting 2 Agenda 
 1. What to do with a combined dataset once finished
