@@ -68,4 +68,8 @@ Adam tried to iron out a research proposal
 
 Josh moved everything over from google docs to github 
 
+### October 4th, 2023 
+Github Integration Test w/ Desktop -- Trushaan
+
+
 
