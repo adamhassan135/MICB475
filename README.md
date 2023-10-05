@@ -85,11 +85,11 @@ Work done on server
 (qiime2-2023.7) root@7c22cd5c6acc:~# cd data/
 (qiime2-2023.7) root@7c22cd5c6acc:~/data# cd tanzania_demux/
 
-### Transfer of Manifest file to QIIME2 (in separate terminal window)
+## Transfer of Manifest file to QIIME2 (in separate terminal window)
 PS C:\Users\trush\Documents\475\project_2> scp tanzania_colombia_manifest.txt root@10.19.139.107:/data/tanzania_demux
 
 
-### Demultiplexing using the manifest file on QIIME2
+## Demultiplexing using the manifest file on QIIME2
 (qiime2-2023.7) root@7c22cd5c6acc:~/data/tanzania_demux# qiime tools import \
   --type "SampleData[SequencesWithQuality]" \
   --input-format SingleEndFastqManifestPhred33V2 \
@@ -98,12 +98,12 @@ PS C:\Users\trush\Documents\475\project_2> scp tanzania_colombia_manifest.txt ro
 Imported ./tanzania_colombia_manifest.txt as SingleEndFastqManifestPhred33V2 to ./tanzania_colombia_demux_seqs.qza
 
 
-# Creating a visualization of demultiplexed samples 
+## Creating a visualization of demultiplexed samples 
 qiime demux summarize \
   --i-data tanzania_colombia_demux.qza \
   --o-visualization tanzania_colombia_demux_seqs.qzv
 
-## transfer of tanzania_colombia_demux_seqs.qzv to local machine (in separate terminal window)
+## Transfer of tanzania_colombia_demux_seqs.qzv to local machine (in separate terminal window)
 PS C:\Users\trush\Documents\475\project_2> scp root@10.19.139.107:/data/tanzania_demux/tanzania_colombia_demux_seqs.qzv .
 
 
