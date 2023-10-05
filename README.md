@@ -71,5 +71,6 @@ Josh moved everything over from google docs to github
 ### October 4th, 2023 
 Github Integration Test w/ Desktop -- Trushaan
 
-
+Completed manifest file -- Timothy 
+(note on the txt file, it's tab limited so you should be able to treat it like a tsv file, don't convert the excel file into a csv, it changes the sample ids)
 
