@@ -74,3 +74,36 @@ Github Integration Test w/ Desktop -- Trushaan
 Completed manifest file -- Timothy 
 (note on the txt file, it's tab limited so you should be able to treat it like a tsv file, don't convert the excel file into a csv, it changes the sample ids)
 
+
+
+### October 5th, 2023
+Work done on server
+ user:10.19.139.107
+ pwd: Biome1241
+## navigating to working directory
+
+(qiime2-2023.7) root@7c22cd5c6acc:~# cd data/
+(qiime2-2023.7) root@7c22cd5c6acc:~/data# cd tanzania_demux/
+
+### Transfer of Manifest file to QIIME2 (in separate terminal window)
+PS C:\Users\trush\Documents\475\project_2> scp tanzania_colombia_manifest.txt root@10.19.139.107:/data/tanzania_demux
+
+
+### Demultiplexing using the manifest file on QIIME2
+(qiime2-2023.7) root@7c22cd5c6acc:~/data/tanzania_demux# qiime tools import \
+  --type "SampleData[SequencesWithQuality]" \
+  --input-format SingleEndFastqManifestPhred33V2 \
+  --input-path ./tanzania_colombia_manifest.txt \
+  --output-path ./tanzania_colombia_demux_seqs.qza
+Imported ./tanzania_colombia_manifest.txt as SingleEndFastqManifestPhred33V2 to ./tanzania_colombia_demux_seqs.qza
+
+
+# Creating a visualization of demultiplexed samples 
+qiime demux summarize \
+  --i-data tanzania_colombia_demux.qza \
+  --o-visualization tanzania_colombia_demux_seqs.qzv
+
+## transfer of tanzania_colombia_demux_seqs.qzv to local machine (in separate terminal window)
+PS C:\Users\trush\Documents\475\project_2> scp root@10.19.139.107:/data/tanzania_demux/tanzania_colombia_demux_seqs.qzv .
+
+
