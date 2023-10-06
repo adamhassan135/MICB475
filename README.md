@@ -76,20 +76,20 @@ Completed manifest file -- Timothy
 
 
 
-### October 5th, 2023
+# October 5th, 2023
 Work done on server
  user:10.19.139.107
  pwd: Biome1241
-## navigating to working directory
+### navigating to working directory
 
 (qiime2-2023.7) root@7c22cd5c6acc:~# cd data/
 (qiime2-2023.7) root@7c22cd5c6acc:~/data# cd tanzania_demux/
 
-## Transfer of Manifest file to QIIME2 (in separate terminal window)
+### Transfer of Manifest file to QIIME2 (in separate terminal window)
 PS C:\Users\trush\Documents\475\project_2> scp tanzania_colombia_manifest.txt root@10.19.139.107:/data/tanzania_demux
 
 
-## Demultiplexing using the manifest file on QIIME2
+### Demultiplexing using the manifest file on QIIME2
 (qiime2-2023.7) root@7c22cd5c6acc:~/data/tanzania_demux# qiime tools import \
   --type "SampleData[SequencesWithQuality]" \
   --input-format SingleEndFastqManifestPhred33V2 \
@@ -98,46 +98,46 @@ PS C:\Users\trush\Documents\475\project_2> scp tanzania_colombia_manifest.txt ro
 Imported ./tanzania_colombia_manifest.txt as SingleEndFastqManifestPhred33V2 to ./tanzania_colombia_demux_seqs.qza
 
 
-## Creating a visualization of demultiplexed samples 
+### Creating a visualization of demultiplexed samples 
 qiime demux summarize \
   --i-data tanzania_colombia_demux.qza \
   --o-visualization tanzania_colombia_demux_seqs.qzv
 
-## Transfer of tanzania_colombia_demux_seqs.qzv to local machine (in separate terminal window)
+### Transfer of tanzania_colombia_demux_seqs.qzv to local machine (in separate terminal window)
 PS C:\Users\trush\Documents\475\project_2> scp root@10.19.139.107:/data/tanzania_demux/tanzania_colombia_demux_seqs.qzv .
 
-## Importing and demultiplexing the Colombia dataset
+### Importing and demultiplexing the Colombia dataset
 (qiime2-2023.7) root@7c22cd5c6acc:/data/colombia_demux# qiime tools import \
   --type "SampleData[SequencesWithQuality]" \
   --input-format SingleEndFastqManifestPhred33V2 \
   --input-path /mnt/datasets/project_2/colombia/colombia_manifest.txt \
   --output-path /colombia_demux_seqs.qza
 
-## Creating a visualization of demultiplexed Colombia samples 
+### Creating a visualization of demultiplexed Colombia samples 
 (qiime2-2023.7) root@7c22cd5c6acc:~/data/colombia_demux#
 qiime demux summarize \
   --i-data colombia_demux_seqs.qza \
   --o-visualization colombia_demux_seqs.qzv
 
 
-## transfer of colombia_demux_seqs.qzv to local machine (in separate terminal window)
+### transfer of colombia_demux_seqs.qzv to local machine (in separate terminal window)
 PS C:\Users\trush\Documents\475\project_2> scp root@10.19.139.107:/data/colombia_demux/colombia_demux_seqs.qzv .
 
 
-## Importing and demultiplexing the Tanzania dataset
+### Importing and demultiplexing the Tanzania dataset
 (qiime2-2023.7) root@7c22cd5c6acc:/data/tanzania_demux# qiime tools import \
   --type "SampleData[SequencesWithQuality]" \
   --input-format SingleEndFastqManifestPhred33V2 \
   --input-path /mnt/datasets/project_2/tanzania/tanzania_manifest.txt \
   --output-path ./tanzania_demux_seqs.qza
 
-# Creating a visualization of demultiplexed Colombia samples 
+### Creating a visualization of demultiplexed Colombia samples 
 (qiime2-2023.7) root@7c22cd5c6acc:~/data/colombia_demux#
 qiime demux summarize \
   --i-data tanzania_demux_seqs.qza \
   --o-visualization tanzania_demux_seqs.qzv
 
-## transfer of tanzania_demux_seqs.qzv to local machine (in separate terminal window)
+### transfer of tanzania_demux_seqs.qzv to local machine (in separate terminal window)
 PS C:\Users\trush\Documents\475\project_2> scp root@10.19.139.107:/data/tanzania_demux/tanzania_demux_seqs.qzv .
 
 # Oct 5th, 2023 End (Trushaan)
