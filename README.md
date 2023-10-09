@@ -142,3 +142,14 @@ PS C:\Users\trush\Documents\475\project_2> scp root@10.19.139.107:/data/tanzania
 
 # Oct 5th, 2023 End (Trushaan)
 
+# Oct 8th, 2023
+
+# Determine ASVs with DADA2
+(qiime2-2023.7) root@7c22cd5c6acc:~/data/tanzania_demux# # Determine ASVs with DADA2
+qiime dada2 denoise-single \
+  --i-demultiplexed-seqs tanzania_colombia_demux_seqs.qza \
+  --p-trim-left 0 \
+  --p-trunc-len 210 \
+  --o-representative-sequences tanzania_colombia_rep-seqs.qza \
+  --o-table tanzania_colombia_table.qza \
+  --o-denoising-stats tanzania_colombia_stats.qza
