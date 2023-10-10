@@ -153,3 +153,33 @@ qiime dada2 denoise-single \
   --o-representative-sequences tanzania_colombia_rep-seqs.qza \
   --o-table tanzania_colombia_table.qza \
   --o-denoising-stats tanzania_colombia_stats.qza
+
+# Oct 8, 2023 END (Trushaan)
+
+# Oct 9, 2023 
+
+## Taxonomic analysis
+qiime feature-classifier classify-sklearn \
+  --i-classifier /mnt/datasets/classifiers/silva-138-99-515-806-nb-classifier.qza \
+  --i-reads tanzania_colombia_rep-seqs.qza \
+  --o-classification tanz_col_taxonomy.qza
+
+## Generation of Taxonomy.qzv
+qiime metadata tabulate \
+  --m-input-file tanz_col_taxonomy.qza \
+  --o-visualization tanz_col_taxonomy.qzv
+  
+## Taxonomy barplots
+qiime taxa barplot \
+  --i-table tanzania_colombia_table.qza \
+  --i-taxonomy tanz_col_taxonomy.qza \
+  --m-metadata-file Combined_Tazania_Columbia_Datasets.txt \
+  --o-visualization tanz_col_taxa-bar-plots.qzv
+
+## Filtering table to remove mitochondrial and chloroplast data
+qiime taxa filter-table \
+  --i-table tanzania_colombia_table.qza \
+  --i-taxonomy tanz_col_taxonomy.qza \
+  --p-exclude mitochondria,chloroplast \
+  --o-filtered-table tanz_col_filtered_table.qza
+
