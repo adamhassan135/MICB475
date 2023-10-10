@@ -194,3 +194,30 @@ qiime taxa filter-table \
   --p-exclude mitochondria,chloroplast \
   --o-filtered-table tanz_col_filtered_table.qza
 
+## Exporting Table.qza file
+qiime tools export \
+  --input-path tanz_col_filtered_table.qza \
+  --output-path /data/tanz_col_export
+
+#Oct 9th, 2023 END (Trushaan)
+
+
+#Oct 10th, 2023
+
+## Exporting Taxonomy File 
+(qiime2-2023.7) root@7c22cd5c6acc:/data/tanzania_demux# qiime tools export \
+  --input-path tanz_col_taxonomy.qza \
+  --output-path /data/tanz_col_export
+
+## Generate a tree for phylogenetic diversity analyses
+(qiime2-2023.7) root@7c22cd5c6acc:/data/tanz_col_export# qiime phylogeny align-to-tree-mafft-fasttree \
+  --i-sequences tanzania_colombia_rep-seqs.qza \
+  --o-alignment tanz_col_aligned-rep-seqs.qza \
+  --o-masked-alignment tanz_col_masked-aligned-rep-seqs.qza \
+  --o-tree tanz_col_unrooted-tree.qza \
+  --o-rooted-tree tanz_col_rooted-tree.qza 
+
+## Exporting Tree file 
+(qiime2-2023.7) root@7c22cd5c6acc:/data/tanzania_demux# qiime tools export \
+  --input-path tanz_col_rooted-tree.qza \
+  --output-path /data/tanz_col_export
