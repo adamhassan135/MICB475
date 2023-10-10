@@ -52,6 +52,17 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
   * Chad told us to google how to make our manifest file/ask Evelyn
   * Trush will process the datasets once Adam puts them into qiime
   * Complete QIIME processing by next week if possible
+
+
+### Team Meeting 3 Agenda
+1. Discuss if we did everything properly 
+2. Discuss further steps after making feature-table.txt
+3. Discuss what proposal should further look like
+
+### Team Meeting 3 Conclusions 
+  * 
+
+
 ### End
 -AA (3-Oct-2023)
 # Stuff We did 
