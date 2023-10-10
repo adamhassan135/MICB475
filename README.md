@@ -57,7 +57,7 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 ### Team Meeting 3 Agenda
 1. Discuss if we did everything properly 
 2. Discuss further steps after making feature-table.txt
-3. Discuss what proposal should further look like
+3. Discuss what the proposal should further look like
 
 ### Team Meeting 3 Conclusions 
   * 
