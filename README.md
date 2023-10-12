@@ -230,7 +230,8 @@ TB (10-Oct-2023)
       * Man Whitney for age- version of a T test- if significance is found, we can proceed as normal and mention it, or we can run a multi-linear regression every time instead of a statistical significance test. Tutorial here: https://www.datacamp.com/tutorial/multiple-linear-regression-r-tutorial     .06 is sort of where we should do a multi-linear. However, if it's like .07 or smt it's chill
       * In order to see if the significance leads to positive or negative correlation, we'll have to graph it and see visually
       * Differences in Microbiome composition in Hunter-gatherer diets against a Westernized diet across age and sex in adults
-### End
+### END
+JJ (10-Oct-2023)
 JJ (10-Oct-2023)
 
 ## Proposal
