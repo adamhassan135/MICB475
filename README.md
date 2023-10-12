@@ -229,3 +229,6 @@ qiime tools export \
 (qiime2-2023.7) root@7c22cd5c6acc:/data/tanzania_demux# qiime tools export \
   --input-path tanz_col_rooted-tree.qza \
   --output-path /data/tanz_col_export
+
+## Proposal
+https://docs.google.com/document/d/1bDtrnNiY9EcHu5q0Ehg8QPYso1jSjeHoKq1wGk8cbDk/edit?usp=sharing
