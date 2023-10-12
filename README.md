@@ -236,8 +236,8 @@ TB (10-Oct-2023)
       * Trushaan Bundhoo will carry ou the introduction for our research proposal
 
   ### Team Meeeting Conclusions and what to do next week
-      * We will attempt to create a rough draft of our reserach proposal done by next week to show to our primary teaching assistant in Chad Poloni
-      * Each individual has been assigned an aim and has a rough idea in how to start that aim
+* We will attempt to create a rough draft of our reserach proposal done by next week to show to our primary teaching assistant in Chad Poloni
+* Each individual has been assigned an aim and has a rough idea in how to start that aim
 
 ### END
 JJ (10-Oct-2023)
