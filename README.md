@@ -46,8 +46,6 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 * Worked out our overarching research question and the smaller aims within the larger question
 * Talked about the tasks that are required to puruse the research project in question
 
-### Stuff We did 
-
 ### Team Meeting 2 Conclusions/Things to do for next week
   * Chad told us to google how to make our manifest file/ask Evelyn
   * Trush will process the datasets once Adam puts them into qiime
@@ -231,7 +229,6 @@ TB (10-Oct-2023)
       * In order to see if the significance leads to positive or negative correlation, we'll have to graph it and see visually
       * Differences in Microbiome composition in Hunter-gatherer diets against a Westernized diet across age and sex in adults
 ### END
-JJ (10-Oct-2023)
 JJ (10-Oct-2023)
 
 ## Proposal
