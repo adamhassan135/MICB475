@@ -220,7 +220,7 @@ TB (10-Oct-2023)
 2. Discuss further steps after making feature-table.txt
 3. Discuss what the proposal should further look like
 
-### Team Meeting 3 Conclusions / Notes
+### Team Meeting 3 Meeting Minutes:
   * It was okay to use Silva, we're good with everything Trushaan has done up to this point
   * We should use Shannon's and Weighted Unifrac to look at differences in functional analysis
       * Ensure that the datasets are age and sex matched in R using subset_sample
@@ -228,6 +228,17 @@ TB (10-Oct-2023)
       * Man Whitney for age- version of a T test- if significance is found, we can proceed as normal and mention it, or we can run a multi-linear regression every time instead of a statistical significance test. Tutorial here: https://www.datacamp.com/tutorial/multiple-linear-regression-r-tutorial     .06 is sort of where we should do a multi-linear. However, if it's like .07 or smt it's chill
       * In order to see if the significance leads to positive or negative correlation, we'll have to graph it and see visually
       * Differences in Microbiome composition in Hunter-gatherer diets against a Westernized diet across age and sex in adults
+      * We split up the research aims amongst our different group members
+      * Joshua Jin will do the diversity metrics (Aim 1)
+      * Adam Abdirahman Hassan will do the differential analysis between groups in terms of taxa (Aim 2)
+      * Timothy Bernas will do the Functional Analysis (Aim 3)
+      * Farbod Nematifar will look at subsetting the data based on sex and age differences (Aim 4)
+      * Trushaan Bundhoo will carry ou the introduction for our research proposal
+
+  ### Team Meeeting Conclusions and what to do next week
+      * We will attempt to create a rough draft of our reserach proposal done by next week to show to our primary teaching assistant in Chad Poloni
+      * Each individual has been assigned an aim and has a rough idea in how to start that aim
+
 ### END
 JJ (10-Oct-2023)
 
