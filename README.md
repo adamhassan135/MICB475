@@ -53,24 +53,6 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
   * Trush will process the datasets once Adam puts them into qiime
   * Complete QIIME processing by next week if possible
 
-##October 10, 2023
-
-### Team Meeting 3 Agenda
-1. Discuss if we did everything properly 
-2. Discuss further steps after making feature-table.txt
-3. Discuss what the proposal should further look like
-
-### Team Meeting 3 Conclusions / Notes
-  * It was okay to use Silva, we're good with everything Trushaan has done up to this point
-  * We should use Shannon's and Weighted Unifrac to look at differences in functional analysis
-      * Ensure that the datasets are age and sex matched in R using subset_sample
-      * Prop.test in R will be a proportions test to see if our male/female proportions are significantly different
-      * Man Whitney for age- version of a T test- if significance is found, we can proceed as normal and mention it, or we can run a multi-linear regression every time instead of a statistical significance test. Tutorial here: https://www.datacamp.com/tutorial/multiple-linear-regression-r-tutorial     .06 is sort of where we should do a multi-linear. However, if it's like .07 or smt it's chill
-      * In order to see if the significance leads to positive or negative correlation, we'll have to graph it and see visually
-      * Differences in Microbiome composition in Hunter-gatherer diets against a Westernized diet across age and sex in adults
-    
-
-
 ### End
 -AA (3-Oct-2023)
 # Stuff We did 
@@ -92,7 +74,6 @@ Github Integration Test w/ Desktop -- Trushaan
 
 Completed manifest file -- Timothy 
 (note on the txt file, it's tab limited so you should be able to treat it like a tsv file, don't convert the excel file into a csv, it changes the sample ids)
-
 
 
 # October 5th, 2023
@@ -159,7 +140,8 @@ qiime demux summarize \
 ### transfer of tanzania_demux_seqs.qzv to local machine (in separate terminal window)
 PS C:\Users\trush\Documents\475\project_2> scp root@10.19.139.107:/data/tanzania_demux/tanzania_demux_seqs.qzv .
 
-# Oct 5th, 2023 End (Trushaan)
+###
+TB (5-Oct-2023)
 
 # Oct 8th, 2023
 
@@ -173,7 +155,8 @@ qiime dada2 denoise-single \
   --o-table tanzania_colombia_table.qza \
   --o-denoising-stats tanzania_colombia_stats.qza
 
-# Oct 8, 2023 END (Trushaan)
+### END
+TB (8-Oct-2023)
 
 # Oct 9, 2023 
 
@@ -207,10 +190,11 @@ qiime tools export \
   --input-path tanz_col_filtered_table.qza \
   --output-path /data/tanz_col_export
 
-#Oct 9th, 2023 END (Trushaan)
+### END
+TB (9-Oct-2023)
 
 
-#Oct 10th, 2023
+# Oct 10th, 2023
 
 ## Exporting Taxonomy File 
 (qiime2-2023.7) root@7c22cd5c6acc:/data/tanzania_demux# qiime tools export \
@@ -229,6 +213,25 @@ qiime tools export \
 (qiime2-2023.7) root@7c22cd5c6acc:/data/tanzania_demux# qiime tools export \
   --input-path tanz_col_rooted-tree.qza \
   --output-path /data/tanz_col_export
+### END
+TB (10-Oct-2023)
+
+## W6-TM: Week 6- Team Meeting 3 (10-Oct-2023) 
+### Team Meeting 3 Agenda
+1. Discuss if we did everything properly 
+2. Discuss further steps after making feature-table.txt
+3. Discuss what the proposal should further look like
+
+### Team Meeting 3 Conclusions / Notes
+  * It was okay to use Silva, we're good with everything Trushaan has done up to this point
+  * We should use Shannon's and Weighted Unifrac to look at differences in functional analysis
+      * Ensure that the datasets are age and sex matched in R using subset_sample
+      * Prop.test in R will be a proportions test to see if our male/female proportions are significantly different
+      * Man Whitney for age- version of a T test- if significance is found, we can proceed as normal and mention it, or we can run a multi-linear regression every time instead of a statistical significance test. Tutorial here: https://www.datacamp.com/tutorial/multiple-linear-regression-r-tutorial     .06 is sort of where we should do a multi-linear. However, if it's like .07 or smt it's chill
+      * In order to see if the significance leads to positive or negative correlation, we'll have to graph it and see visually
+      * Differences in Microbiome composition in Hunter-gatherer diets against a Westernized diet across age and sex in adults
+### End
+JJ (10-Oct-2023)
 
 ## Proposal
 https://docs.google.com/document/d/1bDtrnNiY9EcHu5q0Ehg8QPYso1jSjeHoKq1wGk8cbDk/edit?usp=sharing
