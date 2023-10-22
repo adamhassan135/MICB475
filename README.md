@@ -212,6 +212,22 @@ TB (9-Oct-2023)
 (qiime2-2023.7) root@7c22cd5c6acc:/data/tanzania_demux# qiime tools export \
   --input-path tanz_col_rooted-tree.qza \
   --output-path /data/tanz_col_export
+
+## generation of feature table.qzv 
+qiime feature-table summarize \
+  --i-table tanz_col_filtered_table.qza \
+  --o-visualization tanz_col_filtered_table.qzv \
+  --m-sample-metadata-file Combined_Tazania_Columbia_Datasets.txt
+
+
+## generation of alpha rarefaction data 
+qiime diversity alpha-rarefaction \
+  --i-table tanz_col_filtered_table.qzv \
+  --i-phylogeny tanz_col_rooted-tree.qza \
+  --p-max-depth 95000 \
+  --m-metadata-file Combined_Tazania_Columbia_Datasets.txt \
+  --o-visualization tanz_col_alpha-rarefaction.qzv
+
 ### END
 TB (10-Oct-2023)
 
