@@ -13,6 +13,7 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 |#P001      |W4-TM|Week 4 Team Meeting|26-Sept-2023|
 |#P001      |W5-TM|Week 5 Team Meeting|3-Oct-2023|
 |#P001      |W6-TM|Week 6 Team Meeting|10-Oct-2023|
+|#P001      |W8-TM|Week 8 Team Meeting|24-Oct-2023|
 # Project Codes
 #P001- Combining of Tanzania and Columbia Data sets and QIIME analysis
 
@@ -261,3 +262,15 @@ JJ (10-Oct-2023)
 
 ## Proposal
 https://docs.google.com/document/d/1bDtrnNiY9EcHu5q0Ehg8QPYso1jSjeHoKq1wGk8cbDk/edit?usp=sharing
+
+## W8-TM: Week 8- Team Meeting #5 (24-Oct-2023)
+Start
+### Team Meeting #5 Agenda 
+1. Get a critique regarding the methods of our paper (Statistical Analysis, Graphs, what is acceptable P values and so on)
+2. Get a better understanding of what is acceptable format for our figures and graphs
+3. What are acceptable parameters for setting abudnance and prevalence during core microbiome analysis for aim 2 of our reserach project
+   
+### Meeting Minutes
+
+
+
