@@ -271,6 +271,18 @@ Start
 3. What are acceptable parameters for setting abudnance and prevalence during core microbiome analysis for aim 2 of our reserach project
    
 ### Meeting Minutes
+* We were simply told to make necessary adjustments to our proposal and this will be outlined within a document given to us some time next week by Chad Poloni.   
+* Ended up agreeing that P value of <0.05 would be considered significant and would suffice.
+* Also agreed upon the fact that the graphs that R produces will be sufficient for our manuscript
+* We were told that there is no clear standard for setting abundance and prevalence and that it is fundamentally up to us what we want to do
+
+### Team Meeting Conclusions and What to do Next Week
+* We will make the adjustments to our proposal based on the feedback that we recieve some time next week
+* We will begin to do our R analysis for each of our indivdiual aims and have something prepared for next week.
+
+### END
+AA (24-Oct-2023)
+
 
 
 
