@@ -14,6 +14,7 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 |#P001      |W5-TM|Week 5 Team Meeting|3-Oct-2023|
 |#P001      |W6-TM|Week 6 Team Meeting|10-Oct-2023|
 |#P001      |W8-TM|Week 8 Team Meeting|24-Oct-2023|
+|#P001      |W9-TM|Week 9 Team Meeting|31-Oct-2023|
 # Project Codes
 #P001- Combining of Tanzania and Columbia Data sets and QIIME analysis
 
@@ -282,6 +283,13 @@ Start
 
 ### END
 AA (24-Oct-2023)
+
+## W9-TM: Week 9- Team Meeting #6 (31-Oct-2023)
+Start
+### Team Meeting #6 Agenda
+1. Going over proposal final time
+2. Determining how to display indicator species analysis for core microbiome analysis (table)
+3. Question regarding displaying species within venn diagram.
 
 
 
