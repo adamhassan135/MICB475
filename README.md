@@ -291,8 +291,8 @@ Start
 2. Determining how to display indicator species analysis for core microbiome analysis (table)
 3. Question regarding displaying species within venn diagram.
 
-###Potential Code to use for Biochemical Pathway Analysis
-https://github.com/AnantharamanLab/METABOLIC/blob/master/METABOLIC-C.pl JJ(01-Nov-2023)
+### Potential Code to use for Biochemical Pathway Analysis
+https://github.com/xia-lab/MicrobiomeAnalystR/blob/master/README.md
 
 
 
