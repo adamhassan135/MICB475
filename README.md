@@ -13,6 +13,8 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 |#P001      |W4-TM|Week 4 Team Meeting|26-Sept-2023|
 |#P001      |W5-TM|Week 5 Team Meeting|3-Oct-2023|
 |#P001      |W6-TM|Week 6 Team Meeting|10-Oct-2023|
+|#P001      |W8-TM|Week 8 Team Meeting|24-Oct-2023|
+|#P001      |W9-TM|Week 9 Team Meeting|31-Oct-2023|
 # Project Codes
 #P001- Combining of Tanzania and Columbia Data sets and QIIME analysis
 
@@ -261,3 +263,37 @@ JJ (10-Oct-2023)
 
 ## Proposal
 https://docs.google.com/document/d/1bDtrnNiY9EcHu5q0Ehg8QPYso1jSjeHoKq1wGk8cbDk/edit?usp=sharing
+
+## W8-TM: Week 8- Team Meeting #5 (24-Oct-2023)
+Start
+### Team Meeting #5 Agenda 
+1. Get a critique regarding the methods of our paper (Statistical Analysis, Graphs, what is acceptable P values and so on)
+2. Get a better understanding of what is acceptable format for our figures and graphs
+3. What are acceptable parameters for setting abudnance and prevalence during core microbiome analysis for aim 2 of our reserach project
+   
+### Meeting Minutes
+* We were simply told to make necessary adjustments to our proposal and this will be outlined within a document given to us some time next week by Chad Poloni.   
+* Ended up agreeing that P value of <0.05 would be considered significant and would suffice.
+* Also agreed upon the fact that the graphs that R produces will be sufficient for our manuscript
+* We were told that there is no clear standard for setting abundance and prevalence and that it is fundamentally up to us what we want to do
+
+### Team Meeting Conclusions and What to do Next Week
+* We will make the adjustments to our proposal based on the feedback that we recieve some time next week
+* We will begin to do our R analysis for each of our indivdiual aims and have something prepared for next week.
+
+### END
+AA (24-Oct-2023)
+
+## W9-TM: Week 9- Team Meeting #6 (31-Oct-2023)
+Start
+### Team Meeting #6 Agenda
+1. Going over proposal final time
+2. Determining how to display indicator species analysis for core microbiome analysis (table)
+3. Question regarding displaying species within venn diagram.
+
+### Potential Code to use for Biochemical Pathway Analysis
+https://github.com/xia-lab/MicrobiomeAnalystR/blob/master/README.md
+
+
+
+
