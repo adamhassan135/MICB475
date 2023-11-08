@@ -15,6 +15,7 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 |#P001      |W6-TM|Week 6 Team Meeting|10-Oct-2023|
 |#P001      |W8-TM|Week 8 Team Meeting|24-Oct-2023|
 |#P001      |W9-TM|Week 9 Team Meeting|31-Oct-2023|
+|#P001      |W10-TM|Week 10 Team Meeting|7-Nov-2023|
 # Project Codes
 #P001- Combining of Tanzania and Columbia Data sets and QIIME analysis
 
@@ -291,8 +292,24 @@ Start
 2. Determining how to display indicator species analysis for core microbiome analysis (table)
 3. Question regarding displaying species within venn diagram.
 
+### Meeting Minutes
+* Talked about the code required for carrying out biochemical pathway analysis for aim 3 regarding functional analysis
+
 ### Potential Code to use for Biochemical Pathway Analysis
 https://github.com/xia-lab/MicrobiomeAnalystR/blob/master/README.md
+
+### Team Meeting Conclusions and What to do Next Week
+* We will continue to work on our individual aims in preparation for creating our figures for our manuscript
+
+### END
+AA (31-Oct-2023)
+
+## W10-TM : Week 10- Team Meeting #7 (7-Oct-2023)
+Start
+### Team Meeting #7 Agenda
+1. Figuring out how to alleviate issues in regards to the usage of picrust2 for functional analysis
+2. Figuring out potential alternatives to picrust2 if the fixes are not figured out. 
+
 
 
 
