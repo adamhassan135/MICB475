@@ -16,6 +16,7 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 |#P001      |W8-TM|Week 8 Team Meeting|24-Oct-2023|
 |#P001      |W9-TM|Week 9 Team Meeting|31-Oct-2023|
 |#P001      |W10-TM|Week 10 Team Meeting|7-Nov-2023|
+|#P001      |W11-TM|Week 11 Team Meeting|16-Nov-2023|
 # Project Codes
 #P001- Combining of Tanzania and Columbia Data sets and QIIME analysis
 
@@ -304,11 +305,29 @@ https://github.com/xia-lab/MicrobiomeAnalystR/blob/master/README.md
 ### END
 AA (31-Oct-2023)
 
-## W10-TM : Week 10- Team Meeting #7 (7-Oct-2023)
+## W10-TM : Week 10- Team Meeting #7 (7-Nov-2023)
 Start
 ### Team Meeting #7 Agenda
 1. Figuring out how to alleviate issues in regards to the usage of picrust2 for functional analysis
-2. Figuring out potential alternatives to picrust2 if the fixes are not figured out. 
+2. Figuring out potential alternatives to picrust2 if the fixes are not figured out.
+
+### Meeting Minutes
+* Talked about that for now we should move on from functional analysis via PICRUST2 and should focus on completing other aims 1 and 2 in particular.
+* Talked about how to improve aim 2 we should zone in on the top 5 genera that are found within tanzania and columbia datasets respectively and do some digging in regards to the research on health implications.
+* Talked abotu how to best approach alpha and beta diversity for our combined data sets.
+
+### Team Meeting Conclusions and What to do Next Week
+* We will attempt to fully complete aim 1/2 and show it to our main TA Chad for our next meeting.
+
+### END
+AA (7-Nov-2023)
+
+## W11-TM : Week 11- Team Meeting #7 (16-Nov-2023)
+Start
+### Team Meeting #8 Agenda
+1. Look over our attempts to complete aims 1/2 for our project
+
+
 
 
 
