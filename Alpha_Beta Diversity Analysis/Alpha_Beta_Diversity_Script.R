@@ -70,12 +70,10 @@ Beta_Diversity_Tanz_Col_Significance<-adonis2(dm_unifrac_tanz_col ~ Location, da
 
 #Step 3: Generating new PCOA plot that has significance
 pcoa_plot_unifrac_Tanz_Col_significance_included <-plot_ordination(tanz_col_rare,pcoa_Tanz_Col_unifrac, color ="Location", shape="Location") +
- stat_ellipse(type = "norm")
+ stat_ellipse(type = "norm") 
 
-#Saving New PCoA plot with elipses surrounding groups of significance
-ggsave(filename ="Tanzania_Columbia_PCOA_Unifrac_Plot_significance.jpg", plot=pcoa_plot_unifrac_Tanz_Col_significance_included)
-
-
+#Saving New PCoA plot with ellipses surrounding groups of significance
+ggsave(filename = "Tanzania_Columbia_PCOA_Unifrac_Plot_significance.jpg", pcoa_plot_unifrac_Tanz_Col_significance_included, height=4, width=6)
 
 
 
