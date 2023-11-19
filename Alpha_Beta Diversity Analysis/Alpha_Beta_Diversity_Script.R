@@ -5,12 +5,12 @@ library(picante)
 library(phyloseq)
 library(ape)
 library(ggforce)
-
+library(ggpubr)
 #Step 2: Loading in Phyloseq Object
 load("tanz_col_rare.txt")
 
 #Step 3: Generating Shannon Diversity Graph for Tanzania and Columbia
-gg_richness <- plot_richness(tanz_col_rare, x ="Location",measures=c("Shannon")) +geom_boxplot()
+gg_richness <- plot_richness(tanz_col_rare, x ="Location",measures=c("Shannon")) +geom_boxplot()+ stat_compare_means(label = "p.signif", method = "t.test",ref.group = ".all.")
 
 #Saving the alpha diversity pot
 ggsave(filename = "Tanzania_Columbia_Shannongraph.jpg", plot =gg_richness)
