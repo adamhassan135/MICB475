@@ -10,9 +10,10 @@ library(ggpubr)
 load("tanz_col_rare.txt")
 
 #Step 3: Generating Shannon Diversity Graph for Tanzania and Columbia
-gg_richness <- plot_richness(tanz_col_rare, x ="Location",measures=c("Shannon")) +geom_boxplot()+ stat_compare_means(label = "p.signif", method = "t.test",ref.group = ".all.")
-
-#Saving the alpha diversity pot
+compare_means(Shannon ~ Location, data = tanz_col_sampdat_wdiv)
+gg_richness <- plot_richness(tanz_col_rare, x ="Location",measures=c("Shannon")) +geom_boxplot()+ stat_compare_means(label = "p.signif", method = "wilcox.test",ref.group = ".all.") + stat_compare_means(method="wilcox.test", label.x = 1.4, label.y = 1.3)
+gg_richness
+#Saving the alpha diversity plot
 ggsave(filename = "Tanzania_Columbia_Shannongraph.jpg", plot =gg_richness)
 
 #Step 4: Showing Shannon Diversity values for every sample based on location (Tanzania or Columbia)
@@ -60,7 +61,7 @@ wilcox.test(Shannon ~ Location, data =tanz_col_sampdat_wdiv, exact = FALSE)
 #P-value recorded was < 2.2e-16 which is below the 0.05 cut off point meaning that the Shannon diversity values
 #between the Tanzania and Columbia are significantly different from each other.
 
-#Statistical Significance on Beta Diversity Weighted Unifrac using PERMANOVA and psuedo F ratio
+#Statistical Significance on Beta Diversity Weighted Unifrac using PERMANOVA and pseudo F ratio
 #Step 1: Generating a distance matrix for weighted unifrac
 dm_unifrac_tanz_col <- UniFrac(tanz_col_rare, weighted=TRUE)
 
@@ -70,8 +71,8 @@ Beta_Diversity_Tanz_Col_Significance<-adonis2(dm_unifrac_tanz_col ~ Location, da
 
 #Step 3: Generating new PCOA plot that has significance
 pcoa_plot_unifrac_Tanz_Col_significance_included <-plot_ordination(tanz_col_rare,pcoa_Tanz_Col_unifrac, color ="Location", shape="Location") +
- stat_ellipse(type = "norm") 
-
+ stat_ellipse(type = "norm") + annotate("text", x = 0, y = -0.35, label = "PERMANOVA, p < 0.001")
+pcoa_plot_unifrac_Tanz_Col_significance_included
 #Saving New PCoA plot with ellipses surrounding groups of significance
 ggsave(filename = "Tanzania_Columbia_PCOA_Unifrac_Plot_significance.jpg", pcoa_plot_unifrac_Tanz_Col_significance_included, height=4, width=6)
 
