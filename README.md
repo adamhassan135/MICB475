@@ -328,6 +328,21 @@ Start
 1. Look over our attempts to complete aims 1/2 for our project
 
 
+## W12- TM : Week 12- Team Meeting #9 (21-Nov-2023)
+Start 
+### Team Meeting #9 Agenda 
+1. Ask how to connect Functional Analysis Pathways to Indicator Species
+2. Ask how to better visualize PiCRUST Heat Map
+3. Ask how to read all PiCRUST outputs + KO pathway TSV file
+4. Ask how to narrow down our indicator species 
+
+### Meeting Minutes 
+
+### Team Meeting Conclusions and What to do Next Week
+
+### END 
+JJ (21-Nov-2023)
+
 
 
 
