@@ -11,7 +11,7 @@ load("tanz_col_rare.txt")
 
 #Step 3: Generating Shannon Diversity Graph for Tanzania and Columbia
 compare_means(Shannon ~ Location, data = tanz_col_sampdat_wdiv)
-gg_richness <- plot_richness(tanz_col_rare, x ="Location",measures=c("Shannon")) +geom_boxplot()+ stat_compare_means(label = "p.signif", method = "wilcox.test",ref.group = ".all.") + stat_compare_means(method="wilcox.test", label.x = 1.4, label.y = 1.3)
+gg_richness <- plot_richness(tanz_col_rare, x ="Location",measures=c("Shannon")) +geom_boxplot()+ stat_compare_means(method="kruskal.test", label.x = 1.4, label.y = 1.3)
 gg_richness
 #Saving the alpha diversity plot
 ggsave(filename = "Tanzania_Columbia_Shannongraph.jpg", plot =gg_richness, height=5, width=5)
