@@ -334,6 +334,7 @@ Start
 1. Ask how to connect Functional Analysis Pathways to Indicator Species
 2. Ask how to better visualize PiCRUST Heat Map
 3. Ask how to read all PiCRUST outputs + KO pathway TSV file
+4. Ask how to narrow down our indicator species 
 
 ### Meeting Minutes 
 
