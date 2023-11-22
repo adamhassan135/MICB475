@@ -338,7 +338,17 @@ Start
 
 ### Meeting Minutes 
 
+*Talked about our PICRUSt analysis and what is important 
+*Talked about how to narrow down our indicator species
+*Talked about how to carry out our sex and age confound analysis 
+
 ### Team Meeting Conclusions and What to do Next Week
+
+1. Finalize indicator species table. One table of 10 of each, Colombia and Tanzania's indicator species - Probably Adam will do this. Write in a column saying this is backed by literature, or not, Evelyn said we could rely purely on numbers as well. 
+2. Finalize PCA plot titled "Functional Diversity is Higher in Colombia Microbiomes" or something like that. Include in the figure caption very basic info, such as statistical analysis used, the fact that analysis was used with picrust, etc, etc. Crop out the P values. 
+3. Write a skeleton structure of what we want to cover for our proposal and use the same thing for our manuscript.
+4. Don't use the heat map. It's trash. 
+   
 
 ### END 
 JJ (21-Nov-2023)
