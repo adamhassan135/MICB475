@@ -355,9 +355,8 @@ JJ (21-Nov-2023)
 ### Work done on 21-Nov-2023 
 - added significance indicators and performed statistical analysis on the figures for alpha and beta diversity 
 - changed the shannon graph test from wilcoxon to kruskal-wallis 
-TB 
+TB
 
-
-
-
-
+### Presentation and Final Paper
+https://docs.google.com/presentation/d/11SDMi5dXWnvHkX7xN6CsoRfdqz02K2kkiT7qUyvSNOU/edit?usp=sharing
+https://docs.google.com/document/d/1qT8bYZPFdBTiBRVsgSuAKUt-OsJqcpSn-fCT7JvJbwg/edit?usp=sharing
