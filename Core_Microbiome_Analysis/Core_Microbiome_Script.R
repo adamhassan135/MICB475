@@ -13,15 +13,15 @@ tanz_col_RA <- transform_sample_counts(tanz_col_phyloseq_final, fun=function(x) 
 
 #Step 4: Subsetting data into Tanzania and Columbia groups
 Tanzania_stat <- subset_samples(tanz_col_RA, Location=="TANZANIA")
-Columbia_stat <- subset_samples(tanz_col_RA, Location=="COLUMBIA")
+Colombia_stat <- subset_samples(tanz_col_RA, Location=="COLOMBIA")
 
 #Step 5: Setting up the thresholds for prevalence and abundance
 Tanzania_ASVs <- core_members(Tanzania_stat, detection=0.001, prevalence = 0.10)
-Columbia_ASVs <- core_members(Columbia_stat, detection=0.001, prevalence = 0.10)
+Colombia_ASVs <- core_members(Colombia_stat, detection=0.001, prevalence = 0.10)
 
 #Step 6: Generating Venn Diagram
 #Combining The Tanzania and Columbia subsetted data into a singular list
-Tanzania_Columbia_ASVs_together <- list(Tanzania =Tanzania_ASVs, Columbia =Columbia_ASVs)
+Tanzania_Columbia_ASVs_together <- list(Tanzania =Tanzania_ASVs, Colombia =Columbia_ASVs)
 #Actually making the Venn Diagram
 Venndigram <- ggVennDiagram(x= Tanzania_Columbia_ASVs_together)
 ggsave("tanz_col_VennDiagram.jpeg", Venndigram)
@@ -49,6 +49,9 @@ Indicator_Species_Analysis_Table_tanz_col <- isa_tanz_col$sign %>%
   filter(p.value<0.05) %>% view()
 
 view(Indicator_Species_Analysis_Table_tanz_col)
+
+#Step 4: Saving Indicator Taxa Table
+write.table(Indicator_Species_Analysis_Table_tanz_col, file="Indicator_Taxa_Table.txt", sep= "\t", row.names=FALSE)
   
 
 

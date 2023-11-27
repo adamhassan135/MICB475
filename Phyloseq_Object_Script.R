@@ -33,6 +33,10 @@ OTU <- otu_table(otu_mat, taxa_are_rows = TRUE)
 samp_df <- as.data.frame(meta[,-1]) 
 #Creating new first column within meta data table with the #sampleID as the new index
 rownames(samp_df)<- meta$'#SampleID'
+#Altering meta data column name to Colombia instead of Columbia
+conditions <- c("COLUMBIA")
+replacement_values <- c("COLOMBIA")
+samp_df$Location <- replace(samp_df$Location, samp_df$Location %in% conditions, replacement_values)
 #Generating the Phyloseq meta data object from adjusted meta data table
 SAMP <- sample_data(samp_df)
 
