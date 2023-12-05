@@ -360,3 +360,8 @@ TB
 ### Presentation and Final Paper
 https://docs.google.com/presentation/d/11SDMi5dXWnvHkX7xN6CsoRfdqz02K2kkiT7qUyvSNOU/edit?usp=sharing
 https://docs.google.com/document/d/1qT8bYZPFdBTiBRVsgSuAKUt-OsJqcpSn-fCT7JvJbwg/edit?usp=sharing
+
+### Metagenome Prediction with PICRUSt2
+picrust2_pipeline.py -s ~/data/picrust2_prep/take2/DADA2/tanzcol/tanzcol_repseqs.fasta \
+-i ~/data/picrust2_prep/take2/filtered/tanzcol/tanzcol_freqfiltabun.biom \
+-o ./picrust2take2/tanzcol -p 1
