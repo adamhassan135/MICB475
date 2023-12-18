@@ -17,8 +17,10 @@ Adam Abdirahman Hassan, Joshua Jin, Trushaan Bundhoo, Timothy Bernas, and Farbod
 |#P001      |W9-TM|Week 9 Team Meeting|31-Oct-2023|
 |#P001      |W10-TM|Week 10 Team Meeting|7-Nov-2023|
 |#P001      |W11-TM|Week 11 Team Meeting|16-Nov-2023|
+|#P001      |W12-TM|Week 12 Team Meeting|21-Nov-2023|
+|#P001      |W13-TM|Week 13 Team Meeting|28-Nov-2023|
 # Project Codes
-#P001- Combining of Tanzania and Columbia Data sets and QIIME analysis
+#P001- Tanzania and Colombia combination data anlaysis
 
 
 ## W4-TM: Week 4- Team Meeting 1 (26-Sept-2023)
@@ -357,6 +359,19 @@ JJ (21-Nov-2023)
 - changed the shannon graph test from wilcoxon to kruskal-wallis 
 TB
 
+## W13- TM: Week 13- Team Meeting #10 (28-Nov-2023)
+Start
+### Team Meeting #10 Agenda
+1. Go over slides that we prepared for the upcoming meeting on Dec.5th or Dec.7th
+
+### Meeting Minutes
+* Talked about ways that we could improve our presentation slides and what is expected when we should present
+
+### Team Meeting Conclusions and What to do Next Week
+* We will continue writing the manuscript and get as much done for the rough draft manuscript due on December 10th
+
+### End
+-AA (28-Nov-2023)
 ### Presentation and Final Paper
 https://docs.google.com/presentation/d/11SDMi5dXWnvHkX7xN6CsoRfdqz02K2kkiT7qUyvSNOU/edit?usp=sharing
 https://docs.google.com/document/d/1qT8bYZPFdBTiBRVsgSuAKUt-OsJqcpSn-fCT7JvJbwg/edit?usp=sharing
