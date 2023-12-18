@@ -1,3 +1,5 @@
+#27-Oct-2023
+#Start
 #Step 1: Calling Upon the Packages Required for Analysis
 library(vegan)
 library(tidyverse)
@@ -76,6 +78,9 @@ tanz_col_rare <-rarefy_even_depth(tanz_col_phyloseq_final, rngseed = 1, sample.s
 
 #Step 9:Saving Rarefied Phyloseq Object
 save(tanz_col_rare, file="tanz_col_rare.txt")
+
+#End 
+#-AA (27-Oct-2023)
 
 
 
