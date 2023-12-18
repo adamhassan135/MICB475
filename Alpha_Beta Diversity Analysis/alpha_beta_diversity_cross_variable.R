@@ -1,0 +1,186 @@
+#Step 1: Calling upon the necesssary packages for diversity analysis
+library(vegan)
+library(tidyverse)
+library(picante)
+library(phyloseq)
+library(ape)
+library(ggforce)
+library(ggpubr)
+library(carData)
+library(car)
+library(MASS)
+#Step 2: Loading in Phyloseq Object
+load("tanz_col_rare.txt")
+
+#Step 3: Generating Shannon Diversity Graph for Tanzania and Columbia
+compare_means(Shannon ~ Location, data = tanz_col_sampdat_wdiv)
+gg_richness <- plot_richness(tanz_col_rare, x ="Location",measures=c("Shannon")) +geom_boxplot()+ stat_compare_means(label = "p.signif", method = "wilcox.test",ref.group = ".all.") + stat_compare_means(method="wilcox.test", label.x = 1.4, label.y = 1.3)
+gg_richness
+#Saving the alpha diversity plot
+ggsave(filename = "Tanzania_Columbia_Shannongraph.jpg", plot =gg_richness, height=5, width=5)
+
+#Step 4: Showing Shannon Diversity values for every sample based on location (Tanzania or Columbia)
+Shannon_Diveristy_Values <- estimate_richness(tanz_col_rare,measures =c("Shannon"))
+
+#Joining together meta dat table and Shannon Diversity Values into a singular data frame
+Shannon_Diversity_Values_withmetadata <- data.frame(tanz_col_sampdat, Shannon_Diveristy_Values)
+
+#Only keeping the location meta data category and removing all other columns 
+Shannon_Diversity_Values_Location_Only <- select(Shannon_Diversity_Values_withmetadata, "Location", "Shannon")
+
+#Saving Table as a txt file
+write.table(Shannon_Diversity_Values_Location_Only, file="Shannon_Diversity_Values.txt", sep ="\t", row.names= FALSE)
+
+#Generating Weighted Unifrac PCOA plot and Beta Diversity Analysis
+#step 1: Determining Phylogenetic Distances
+weighted_unifrac_distance <- distance(tanz_col_rare, method = "unifrac")
+
+
+
+#Step 2:Generating Co-ordinate System for PCOA plot
+pcoa_Tanz_Col_unifrac <-ordinate(tanz_col_rare, method = "PCoA", distance = weighted_unifrac_distance)
+
+#Step 3:Generation of Actual PCoA plot and seperating based on location e.g Tanzania and Columbia
+pcoa_plot_unifrac_Tanz_Col <-plot_ordination(tanz_col_rare, pcoa_Tanz_Col_unifrac, color = "Location", shape = "Location")
+
+ggsave(filename ="Tanzania_Columbia_PCOA_Unifrac_Plot.jpg", plot=pcoa_plot_unifrac_Tanz_Col)
+
+#Statistical Analysis on Shannon Diversity metrics via linear regression
+#Step 1: Generating all known diversity metrics using the estimate richness command
+alphadiv_tanz_col <- estimate_richness(tanz_col_rare)
+
+#Step 2: Extracting the Meta data table from phyloseq object 
+tanz_col_sampdat <- sample_data(tanz_col_rare)
+
+#Step 3:Joining meta data and alpha diversity metrics together in a singular object
+tanz_col_sampdat_wdiv <- data.frame(tanz_col_sampdat, alphadiv_tanz_col)
+
+#Step 4:Determining if data is skewed
+allCounts <- as.vector(otu_table(tanz_col_rare))
+allCounts <- allCounts[allCounts>0]
+hist(allCounts)
+#Clearly data is skewed so Wilcoxon Rank sum Test is the best choice for statistical analysis on Shannon Diversity Metric
+
+#Step 5: Carrying out Wilcoxon Test upon Shannon Diversity Metric
+wilcox.test(Shannon ~ Location, data =tanz_col_sampdat_wdiv, exact = FALSE)
+#P-value recorded was < 2.2e-16 which is below the 0.05 cut off point meaning that the Shannon diversity values
+#between the Tanzania and Columbia are significantly different from each other.
+
+#Statistical Significance on Beta Diversity Weighted Unifrac using PERMANOVA and pseudo F ratio
+#Step 1: Generating a distance matrix for weighted unifrac
+dm_unifrac_tanz_col <- UniFrac(tanz_col_rare, weighted=TRUE)
+
+#Step 2:Running the Adonis Function
+Beta_Diversity_Tanz_Col_Significance<-adonis2(dm_unifrac_tanz_col ~ Location, data =tanz_col_sampdat_wdiv)
+#P value was less than 0.001 meaning that there is significant differences in terms of beta diversity between the Columbia and Tanzania Samples
+
+#Step 3: Generating new PCOA plot that has significance
+pcoa_plot_unifrac_Tanz_Col_significance_included <-plot_ordination(tanz_col_rare,pcoa_Tanz_Col_unifrac, color ="Location", shape="Location") +
+ stat_ellipse(type = "norm") + annotate("text", x = 0, y = -0.35, label = "PERMANOVA, p < 0.001")
+pcoa_plot_unifrac_Tanz_Col_significance_included
+#Saving New PCoA plot with ellipses surrounding groups of significance
+ggsave(filename = "Tanzania_Columbia_PCOA_Unifrac_Plot_significance.jpg", pcoa_plot_unifrac_Tanz_Col_significance_included, height=4, width=6)
+
+
+
+#November 20th 2023
+#Run Linear Regression Models on the data for shannons diversity and age and sex and location
+model1 <- lm(Shannon_Diversity_Values_withmetadata$Shannon ~ Shannon_Diversity_Values_withmetadata$age_years, data = Shannon_Diversity_Values_withmetadata)
+model2 <- lm(Shannon_Diversity_Values_withmetadata$Shannon ~ Shannon_Diversity_Values_withmetadata$sex, data = Shannon_Diversity_Values_withmetadata)
+model3 <- lm(Shannon_Diversity_Values_withmetadata$Shannon ~ Shannon_Diversity_Values_withmetadata$Location, data = Shannon_Diversity_Values_withmetadata)
+
+summary(model1)
+summary(model2)
+summary(model3)
+
+
+#graph the diversity metrics across age sex and location
+locationShannon <- ggplot(Shannon_Diversity_Values_withmetadata, aes(x = Shannon_Diversity_Values_withmetadata$Location, y = Shannon_Diversity_Values_withmetadata$Shannon )) +
+  geom_point() +               
+  geom_smooth(method = "lm")
+
+ageShannon <- ggplot(Shannon_Diversity_Values_withmetadata, aes(x = Shannon_Diversity_Values_withmetadata$age_years, y = Shannon_Diversity_Values_withmetadata$Shannon )) +
+  geom_point() +               
+  geom_smooth(method = "lm")
+
+sexShannon  <- ggplot(Shannon_Diversity_Values_withmetadata, aes(x = Shannon_Diversity_Values_withmetadata$sex, y = Shannon_Diversity_Values_withmetadata$Shannon )) +
+  geom_point() +               
+  geom_smooth(method = "lm")
+
+#see graphs
+locationShannon
+ageShannon
+sexShannon
+
+
+#plot graphs with greater detail 
+plotSex <- ggplot(Shannon_Diversity_Values_withmetadata, aes(x = sex, y = Shannon, fill = sex)) +
+  geom_boxplot() +
+  fill_palette(c("white", "grey")) +
+  ggtitle("Shannon's Diversity Values Across Sex") +
+  ylab("Shannon's Diversity Metrics") + 
+  annotate("text", x = 0.9, y = -0.35, label = "Linear Regression, p > 0.05, p ~ 0.877", vjust = "below", hjust = "left")
+
+plotLocation <- ggplot(Shannon_Diversity_Values_withmetadata, aes(x = Location, y = Shannon, fill = Location)) +
+  geom_boxplot() +
+  fill_palette(c("white", "grey")) +
+  ggtitle("Shannon's Diversity Values Across Location") +
+  ylab("Shannon's Diversity Metrics") + 
+  annotate("text", x = 0.9, y = -0.35, label = "Linear Regression, p < 0.05, p ~ 2e-16", vjust = "below", hjust = "left")
+
+plotYears <- ggplot(Shannon_Diversity_Values_withmetadata, aes(x = age_years, y = Shannon)) +
+  geom_point(aes(color = Location)) + 
+  geom_smooth(method = "lm", se = FALSE, color = "black") +
+  color_palette(c("grey", "black")) +
+  ggtitle("Shannon's Diversity Values Across Age") +
+  ylab("Shannon's Diversity Metrics") + 
+  annotate("text", x = 0.9, y = -0.35, label = "Linear Regression, p > 0.05, p ~ 0.243", vjust = "below", hjust = "left")
+
+#see graphs with greater detail
+plotYears
+plotSex
+plotLocation
+#save graphs with detail 
+ggsave(filename = "ShannonsAge.jpg", plotYears, height=4, width=6)
+ggsave(filename = "plotLocation.jpg", plotLocation, height=4, width=6)
+ggsave(filename = "plotSex.jpg", plotSex, height=4, width=6)
+
+
+#December 4th 2023
+#examine beta diversity differences for sex and location and age_years
+Beta_Diversity_Tanz_Col_Significance1<-adonis2(dm_unifrac_tanz_col ~ Location, data = tanz_col_sampdat_wdiv)
+Beta_Diversity_Tanz_Col_Significance2<-adonis2(dm_unifrac_tanz_col ~ sex, data = tanz_col_sampdat_wdiv)
+Beta_Diversity_Tanz_Col_Significance3<-adonis2(dm_unifrac_tanz_col ~ age_years, data = tanz_col_sampdat_wdiv)
+
+#see values 
+Beta_Diversity_Tanz_Col_Significance1
+Beta_Diversity_Tanz_Col_Significance2
+Beta_Diversity_Tanz_Col_Significance3
+
+
+#create pcoa plots for data 
+pcoa_plot_unifrac_Tanz_Col_significance_included1 <-plot_ordination(tanz_col_rare,pcoa_Tanz_Col_unifrac, color ="Location", shape="Location") +
+  stat_ellipse(type = "norm") + annotate("text", x = 0, y = -0.35, label = "PERMANOVA, p < 0.001")
+
+pcoa_plot_unifrac_Tanz_Col_significance_included2 <-plot_ordination(tanz_col_rare,pcoa_Tanz_Col_unifrac, color ="sex", shape="Location") +
+  stat_ellipse(type = "norm") + annotate("text", x = 0, y = -0.35, label = "PERMANOVA, p < 0.01")
+
+pcoa_plot_unifrac_Tanz_Col_significance_included3 <-plot_ordination(tanz_col_rare,pcoa_Tanz_Col_unifrac, color ="age_years", shape="Location") +
+  stat_ellipse(type = "norm") + annotate("text", x = 0, y = -0.35, label = "PERMANOVA, p > 0,05, p ~ 0.9")
+
+#see the results 
+pcoa_plot_unifrac_Tanz_Col_significance_included1
+pcoa_plot_unifrac_Tanz_Col_significance_included2
+pcoa_plot_unifrac_Tanz_Col_significance_included3
+
+
+#save information for beta diversity 
+ggsave(filename = "sexUnifrac.jpg", pcoa_plot_unifrac_Tanz_Col_significance_included2, height=4, width=6)
+ggsave(filename = "locationUnifrac.jpg", pcoa_plot_unifrac_Tanz_Col_significance_included1, height=4, width=6)
+ggsave(filename = "ageUnifrac.jpg", pcoa_plot_unifrac_Tanz_Col_significance_included3, height=4, width=6)
+
+
+
+
+
+
