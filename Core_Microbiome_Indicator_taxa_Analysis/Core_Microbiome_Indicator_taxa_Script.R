@@ -1,3 +1,5 @@
+#Date: 27-Oct-2023
+#Start Core Microbiome Analysis
 #Step 1: Loading all the packages requried for core microbiome analysis
 library(tidyverse)
 library(phyloseq)
@@ -6,7 +8,7 @@ library(ggVennDiagram)
 library(indicspecies)
 
 #sTEP 2: Loading Unrarefied phylo seq object that was generated from previous analysis
-load("../Core_Microbiome_Analysis/tanz_col_phyloseq_final.txt")
+load("../Core_Microbiome_Indicator_taxa_Analysis/tanz_col_phyloseq_final.txt")
 
 #Step 3: Converting OTU table to relative abundance
 tanz_col_RA <- transform_sample_counts(tanz_col_phyloseq_final, fun=function(x) x/sum(x))
@@ -26,8 +28,10 @@ Tanzania_Columbia_ASVs_together <- list(Tanzania =Tanzania_ASVs, Colombia =Colum
 Venndigram <- ggVennDiagram(x= Tanzania_Columbia_ASVs_together)
 ggsave("tanz_col_VennDiagram.jpeg", Venndigram)
 
+#End AA (27-Oct-2023)
 
-
+#Date: 27-Oct-2023
+#Start
 #Indicator Species Analaysis
 
 #Step 1:Grouping Organisms based on the genus level and then determining their relative abundance
@@ -53,7 +57,7 @@ view(Indicator_Species_Analysis_Table_tanz_col)
 #Step 4: Saving Indicator Taxa Table
 write.table(Indicator_Species_Analysis_Table_tanz_col, file="Indicator_Taxa_Table.txt", sep= "\t", row.names=FALSE)
   
-
-
+#End
+#-AA (27-Oct-2023)
 
 

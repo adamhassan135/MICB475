@@ -1,3 +1,5 @@
+#Start
+#Date: 27-Oct-2023
 #Step 1: Calling upon the necesssary packages for diversity analysis
 library(vegan)
 library(tidyverse)
@@ -76,6 +78,8 @@ pcoa_plot_unifrac_Tanz_Col_significance_included
 #Saving New PCoA plot with ellipses surrounding groups of significance
 ggsave(filename = "Tanzania_Columbia_PCOA_Unifrac_Plot_significance.jpg", pcoa_plot_unifrac_Tanz_Col_significance_included, height=4, width=6)
 
+#End
+#-AA (27-Oct-2023)
 
 
 
